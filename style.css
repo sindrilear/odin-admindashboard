@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.sidebar {
+    display: flex;
+    gap: 5px;
+    flex-direction:column;
+    padding-left: 50px;
+    background-color:#10b981;
+    font-size: 20px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.dashboardbutton {
+    font-size: 30px;
+}
+
+header {
+    grid-column: 2 / 5;
+    padding-left: 50px;
+    padding-top: 25px;
+}
+
+.topnav {
+    display:grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    justify-content:center;
+}
+
+
+
+.topnav p {
+    text-align:center;
+    margin: 0;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 100px 2fr;
+}
+
+.maincontent {
+    grid-column: 2 / 5;
+}
+
+.headercontent {
+    display:grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.userbuttons {
+    display:flex;
+    text-align:center;
+    justify-content:center;
+    gap:15px;
+}
