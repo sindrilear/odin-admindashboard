@@ -1,11 +1,22 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+html, body {
+    padding: 0;
     margin: 0;
-    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+p {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .container {
+    height: 100vh;
     display:grid;
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: 300px repeat(2, 1fr) 400px;
+    grid-template-rows: auto 50px 1fr auto;
 }
 
 .sidebar {
@@ -13,7 +24,7 @@ body {
     gap: 5px;
     flex-direction:column;
     padding-left: 50px;
-    background-color:#10b981;
+    background-color: #8971d0; 
     font-size: 20px;
     grid-column: 1 / 2;
     grid-row: 1 / 4;
@@ -27,6 +38,13 @@ header {
     grid-column: 2 / 5;
     padding-left: 50px;
     padding-top: 25px;
+    margin-bottom: 5px;
+    box-shadow: 0px 15px 10px -15px #111; 
+}
+
+.headeruser {
+    display:flex;
+    align-items:center;
 }
 
 .topnav {
@@ -36,22 +54,87 @@ header {
     justify-content:center;
 }
 
-
-
 .topnav p {
     text-align:center;
     margin: 0;
 }
 
+.navprofile {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
 .search {
-    display: grid;
-    grid-template-columns: 100px 2fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    flex-grow: 1;
+    border-radius: 25px;
+    height: 30px;
+    background: #E8E8E8;
+    border:none;
 }
 
 .maincontent {
-    grid-column: 2 / 5;
+    display:grid;
+    grid-column: 2 / 4;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #DCDCDC;
 }
 
+.heading {
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #DCDCDC;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.projectheading {
+    margin: 0;
+    grid-column: 1 / 3;
+}
+
+.projectannouncement {
+    text-align:start;
+    grid-column: 4 / 5; 
+    margin: 0;
+}
+
+.cards {
+    display:grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 10px solid;
+    border-left-color:#7dace4;
+    background-color:white;
+    height:auto;
+}
+
+.icon-container {
+    display:flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
 .headercontent {
     display:grid;
     grid-template-columns: 3fr 2fr;
@@ -59,10 +142,86 @@ header {
     justify-content: center;
 }
 
-
 .userbuttons {
     display:flex;
     text-align:center;
     justify-content:center;
     gap:15px;
 }
+
+.announcements {
+    display:grid;
+    grid-column: 4 / 5;
+    background-color: #DCDCDC;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    gap: 20px;
+    padding-right: 30px;
+}
+
+.news {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding: 20px;
+    background-color:white;
+    margin: 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+
+.news p, h3 {
+    margin:0;
+    padding-bottom: 15px;
+}
+.trending {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding: 20px;      
+    background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.profile {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    gap: 5px;
+}
+
+img.icon {
+    height: 20px;
+    width: 20px;
+    padding-right: 15px;
+}
+
+img.pfp {
+    height: 60px;
+    width: 60px;
+    border-radius:50%;
+    padding-right: 15px;
+}
+
+button {
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+  }
+
+  .line {
+    border-bottom: 1px solid gray;
+  }
+
+  .trending-title {
+    margin:0;
+  }
